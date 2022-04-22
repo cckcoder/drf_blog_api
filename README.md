@@ -7,3 +7,8 @@
 
 ### CLI
 * `pip install djangorestframework`
+
+### 3rd party
+* dj-rest-auth
+    * For log in, log out and password reset API endpoints
+    * `pip install dj-rest-auth`
