@@ -25,18 +25,12 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "django.contrib.sites",
     # 3rd party
     "rest_framework",
     "rest_framework.authtoken",
-    "allauth",
-    "allauth.account",
-    "allauth.socialaccount",
-    "dj_rest_auth",
-    "dj_rest_auth.registration",
-
     # Local
     "posts",
+    "users",
 ]
 
 MIDDLEWARE = [
@@ -131,9 +125,8 @@ REST_FRAMEWORK = {
     "DEFAULT_AUTHENTICATION_CLASSES": [
         "rest_framework.authentication.TokenAuthentication",
         "rest_framework.authentication.SessionAuthentication",
+        "rest_framework_simplejwt.authentication.JWTAuthentication",
     ],
 }
 
-EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
-
-SITE_ID = 1
+AUTH_USER_MODEL = "users.CustomUser"

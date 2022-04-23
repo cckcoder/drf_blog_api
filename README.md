@@ -12,3 +12,11 @@
 * dj-rest-auth
     * For log in, log out and password reset API endpoints
     * `pip install dj-rest-auth`
+* django-cors-header
+    * `pip install django-cors-header`
+* [Simple JWT](https://django-rest-framework-simplejwt.readthedocs.io/en/latest/)
+    * `pip install djangorestframework-simplejwt`
+
+
+### Ref
+* [create custom user](https://testdriven.io/blog/django-custom-user-model/)
