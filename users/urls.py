@@ -1,9 +1,9 @@
-# posts/urls.py
+# users/urls.py
 
 from rest_framework.routers import SimpleRouter
-from .views import PostViewSet
+from .views import UserViewSet
 
 router = SimpleRouter()
-router.register("", PostViewSet, basename="posts")
+router.register("", UserViewSet, basename="users")
 
 urlpatterns = router.urls
