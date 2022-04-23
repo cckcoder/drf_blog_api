@@ -36,6 +36,7 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
     position = models.CharField(max_length=45, blank=True)
     zone = models.CharField(max_length=45, blank=True, help_text="เขต")
     sub_position = models.CharField(max_length=45, blank=True, help_text="สังกัดย่อ")
+    created_at = models.DateTimeField(auto_now_add=True)
 
     is_staff = models.BooleanField(default=False)
     is_active = models.BooleanField(default=True)
@@ -43,7 +44,7 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
     objects = CustomAccountManager()
 
     USERNAME_FIELD = 'emp_id'
-    REQUIRED_FIELDS = []
+    REQUIRED_FIELDS = ['email']
 
     def __str__(self):
         return str(self.emp_id)
